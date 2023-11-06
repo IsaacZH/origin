@@ -1,3 +1,17 @@
+# Prerequisites
+*.d
+*.txt
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
 
 # Precompiled Headers
 *.gch
@@ -59,3 +73,16 @@ DebugConfig/
 *JLinkSettings.ini
 ~s*
 *.TMP
+build/MY_ENGINEER/axf2elf.log
+build/MY_ENGINEER/builder.params
+build/MY_ENGINEER/builder.params.old
+build/MY_ENGINEER/compile_commands.json
+build/MY_ENGINEER/compiler.log
+build/MY_ENGINEER/MY_ENGINEER.map.view
+build/MY_ENGINEER/MY_ENGINEER.objlist
+build/MY_ENGINEER/MY_ENGINEER.s19
+build/MY_ENGINEER/MY_ENGINEER.sct
+build/MY_ENGINEER/ref.json
+build/MY_ENGINEER/unify_builder.log
+MDK-ARM/MY_ENGINEER.uvguix.18129
+MDK-ARM/MY_ENGINEER/MY_ENGINEER.build_log.htm
