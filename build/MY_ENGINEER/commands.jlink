@@ -1,6 +1,0 @@
-r
-halt
-loadfile "d:\2024_ZJH\MotorTest\build\MY_ENGINEER\MY_ENGINEER.hex"
-r
-go
-exit

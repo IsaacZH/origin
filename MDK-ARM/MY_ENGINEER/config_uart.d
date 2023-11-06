@@ -36,6 +36,4 @@ my_engineer/config_uart.o: USER\config\config_uart.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   USER\device\remote.h USER\config\config_remote.h \
-  USER\protocol\remote_protocol.h USER\protocol\vision_protocol.h \
-  USER\protocol\communicate_protocol.h USER\protocol\judge_protocol.h \
-  ..\Core\Inc\main.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h
+  USER\protocol\remote_protocol.h

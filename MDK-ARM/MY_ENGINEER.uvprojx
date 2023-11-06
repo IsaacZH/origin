@@ -705,34 +705,9 @@
               <FilePath>.\USER\protocol\can_protocol.c</FilePath>
             </File>
             <File>
-              <FileName>communicate_protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\protocol\communicate_protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>judge_protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\protocol\judge_protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>my_judge.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\protocol\my_judge.c</FilePath>
-            </File>
-            <File>
-              <FileName>my_ui.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\protocol\my_ui.c</FilePath>
-            </File>
-            <File>
               <FileName>remote_protocol.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\protocol\remote_protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>vision_protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\protocol\vision_protocol.c</FilePath>
             </File>
             <File>
               <FileName>crc.c</FileName>
@@ -770,29 +745,14 @@
               <FilePath>.\USER\device\device.c</FilePath>
             </File>
             <File>
-              <FileName>gimbal_motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\device\gimbal_motor.c</FilePath>
-            </File>
-            <File>
               <FileName>remote.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\device\remote.c</FilePath>
             </File>
             <File>
-              <FileName>shooting_motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\device\shooting_motor.c</FilePath>
-            </File>
-            <File>
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\device\oled\oled.c</FilePath>
-            </File>
-            <File>
-              <FileName>chassis_motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\device\chassis_motor.c</FilePath>
             </File>
             <File>
               <FileName>test_motor.c</FileName>
@@ -804,26 +764,6 @@
         <Group>
           <GroupName>control</GroupName>
           <Files>
-            <File>
-              <FileName>gimbal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\control\gimbal.c</FilePath>
-            </File>
-            <File>
-              <FileName>shooting.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\control\shooting.c</FilePath>
-            </File>
-            <File>
-              <FileName>chassis.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\control\chassis.c</FilePath>
-            </File>
-            <File>
-              <FileName>car.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\control\car.c</FilePath>
-            </File>
             <File>
               <FileName>test.c</FileName>
               <FileType>1</FileType>

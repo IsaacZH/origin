@@ -1,13 +1,7 @@
 #include "my_task.h"
 #include "device.h"
 #include "can_protocol.h"
-#include "vision_protocol.h"
-#include "communicate_protocol.h"
-#include "my_judge.h"
-#include "judge_protocol.h"
 #include "drive.h"
-#include "gimbal.h"
-#include "car.h"
 #include "usart.h"
 /**
   * @Name    
@@ -78,7 +72,6 @@ void StartHeartBeatTask(void const * argument)
   {
 		Device_HeartBeat();
 		rc_heart_beat(&rc);
-		tick_task(1);
     osDelay(1);
   }
 }
