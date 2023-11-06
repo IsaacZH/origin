@@ -1,0 +1,6 @@
+
+T5388 000:002 SEGGER J-Link V6.30f Log File (0000ms, 0002ms total)
+T5388 000:002 DLL Compiled: Mar  2 2018 17:29:18 (0000ms, 0002ms total)
+T5388 000:002 Logging started @ 2023-11-06 21:37 (0000ms, 0002ms total)
+T5388 000:002 JLINK_SetWarnOutHandler(...) (0000ms, 0002ms total)
+T5388 000:002 JLINK_OpenEx(...)

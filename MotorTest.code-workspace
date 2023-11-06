@@ -1,0 +1,22 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "chassis_motor.h": "c",
+            "config.h": "c",
+            "test_motor.h": "c",
+            "motor.h": "c",
+            "stm32f4xx_hal.h": "c",
+            "stm32f4xx_hal_conf.h": "c",
+            "motor_def.h": "c",
+            "device.h": "c",
+            "config_test.h": "c",
+            "test.h": "c"
+        }
+    },
+    "extensions": {}
+}
