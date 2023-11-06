@@ -175,7 +175,7 @@
         <Ww>
           <count>0</count>
           <WinNumber>2</WinNumber>
-          <ItemText>\\MY_ENGINEER\USER/config/config_test.c\config_test</ItemText>
+          <ItemText>\\MY_ENGINEER\USER/config/config_test.c\config_test,0x0A</ItemText>
         </Ww>
       </WatchWindow2>
       <MemoryWindow1>

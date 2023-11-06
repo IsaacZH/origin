@@ -1,0 +1,395 @@
+[2023-11-06 10:36:35]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+In file included from ./MDK-ARM/USER/device/test_motor.c:13:
+In file included from MDK-ARM/USER/device/test_motor.h:6:
+MDK-ARM/USER/config\config_test.h:1:9: warning: '_CONIFG_TEST_H' is used as a header guard here, followed by #define of a different macro [-Wheader-guard]
+#ifndef _CONIFG_TEST_H
+        ^~~~~~~~~~~~~~
+MDK-ARM/USER/config\config_test.h:2:9: note: '_CONFIG_TEST_H' is defined here; did you mean '_CONIFG_TEST_H'?
+#define _CONFIG_TEST_H
+        ^~~~~~~~~~~~~~
+        _CONIFG_TEST_H
+./MDK-ARM/USER/device/test_motor.c:15:9: error: redefinition of 'test_motor' with a different type: 'motor_t[3]' (aka 'struct motor_class_t[3]') vs 'motor_t' (aka 'struct motor_class_t')
+motor_t test_motor[TEST_MOTOR_LIST] =
+        ^
+MDK-ARM/USER/device/test_motor.h:17:16: note: previous declaration is here
+extern motor_t test_motor;
+               ^
+./MDK-ARM/USER/device/test_motor.c:59:14: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                        ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:59:34: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                                            ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:79:13: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:79:38: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                                         ~~~~~~~~~~^~
+1 warning and 5 errors generated.
+
+[2023-11-06 10:40:52]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.Main(String[] args_)
+---
+In file included from ./MDK-ARM/USER/device/test_motor.c:13:
+In file included from MDK-ARM/USER/device/test_motor.h:6:
+MDK-ARM/USER/config\config_test.h:1:9: warning: '_CONIFG_TEST_H' is used as a header guard here, followed by #define of a different macro [-Wheader-guard]
+#ifndef _CONIFG_TEST_H
+        ^~~~~~~~~~~~~~
+MDK-ARM/USER/config\config_test.h:2:9: note: '_CONFIG_TEST_H' is defined here; did you mean '_CONIFG_TEST_H'?
+#define _CONFIG_TEST_H
+        ^~~~~~~~~~~~~~
+        _CONIFG_TEST_H
+./MDK-ARM/USER/device/test_motor.c:15:9: error: redefinition of 'test_motor' with a different type: 'motor_t[3]' (aka 'struct motor_class_t[3]') vs 'motor_t' (aka 'struct motor_class_t')
+motor_t test_motor[TEST_MOTOR_LIST] =
+        ^
+MDK-ARM/USER/device/test_motor.h:17:16: note: previous declaration is here
+extern motor_t test_motor;
+               ^
+./MDK-ARM/USER/device/test_motor.c:61:14: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                        ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:61:34: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                                            ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:81:13: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:81:38: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                                         ~~~~~~~~~~^~
+1 warning and 5 errors generated.
+
+[2023-11-06 10:41:24]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:15:9: error: redefinition of 'test_motor' with a different type: 'motor_t[3]' (aka 'struct motor_class_t[3]') vs 'motor_t' (aka 'struct motor_class_t')
+motor_t test_motor[TEST_MOTOR_LIST] =
+        ^
+MDK-ARM/USER/device/test_motor.h:17:16: note: previous declaration is here
+extern motor_t test_motor;
+               ^
+./MDK-ARM/USER/device/test_motor.c:61:14: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                        ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:61:34: error: subscripted value is not an array, pointer, or vector
+                        test_motor[i].init(&test_motor[i]);
+                                            ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:81:13: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                ~~~~~~~~~~^~
+./MDK-ARM/USER/device/test_motor.c:81:38: error: subscripted value is not an array, pointer, or vector
+                test_motor[i].heartbeat(&test_motor[i]);
+                                         ~~~~~~~~~~^~
+5 errors generated.
+
+[2023-11-06 10:50:22]	[done]
+	build successfully !
+
+[2023-11-06 15:22:39]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_test.o -MMD ./MDK-ARM/USER/config/config_test.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:23:22: error: use of undeclared identifier 'RM3508'; did you mean 't_RM3508'?
+  .test_motor_type = RM3508,
+                     ^~~~~~
+                     t_RM3508
+MDK-ARM/USER/config/config_test.h:9:2: note: 't_RM3508' declared here
+        t_RM3508,
+        ^
+1 error generated.
+
+[2023-11-06 15:33:39]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_can.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_can.o -MMD ./MDK-ARM/USER/config/config_can.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:23:22: error: use of undeclared identifier 'RM3508'; did you mean 't_RM3508'?
+  .test_motor_type = RM3508,
+                     ^~~~~~
+                     t_RM3508
+MDK-ARM/USER/config/config_test.h:9:2: note: 't_RM3508' declared here
+        t_RM3508,
+        ^
+1 error generated.
+./MDK-ARM/USER/config/config_can.c:26:4: error: use of undeclared identifier 'gimbal_motor'
+                        gimbal_motor[GIMBAL_PITCH].rx(&gimbal_motor[GIMBAL_PITCH],rxBuf,8);
+                        ^
+./MDK-ARM/USER/config/config_can.c:26:17: error: use of undeclared identifier 'GIMBAL_PITCH'
+                        gimbal_motor[GIMBAL_PITCH].rx(&gimbal_motor[GIMBAL_PITCH],rxBuf,8);
+                                     ^
+./MDK-ARM/USER/config/config_can.c:26:35: error: use of undeclared identifier 'gimbal_motor'
+                        gimbal_motor[GIMBAL_PITCH].rx(&gimbal_motor[GIMBAL_PITCH],rxBuf,8);
+                                                       ^
+./MDK-ARM/USER/config/config_can.c:26:48: error: use of undeclared identifier 'GIMBAL_PITCH'
+                        gimbal_motor[GIMBAL_PITCH].rx(&gimbal_motor[GIMBAL_PITCH],rxBuf,8);
+                                                                    ^
+./MDK-ARM/USER/config/config_can.c:28:8: error: use of undeclared identifier 'ID_LIMIT'
+                case ID_LIMIT:
+                     ^
+./MDK-ARM/USER/config/config_can.c:29:4: error: use of undeclared identifier 'shooting_motor'
+                        shooting_motor[LIMIT].rx(&shooting_motor[LIMIT],rxBuf,8);
+                        ^
+./MDK-ARM/USER/config/config_can.c:29:19: error: use of undeclared identifier 'LIMIT'
+                        shooting_motor[LIMIT].rx(&shooting_motor[LIMIT],rxBuf,8);
+                                       ^
+./MDK-ARM/USER/config/config_can.c:29:30: error: use of undeclared identifier 'shooting_motor'
+                        shooting_motor[LIMIT].rx(&shooting_motor[LIMIT],rxBuf,8);
+                                                  ^
+./MDK-ARM/USER/config/config_can.c:29:45: error: use of undeclared identifier 'LIMIT'
+                        shooting_motor[LIMIT].rx(&shooting_motor[LIMIT],rxBuf,8);
+                                                                 ^
+./MDK-ARM/USER/config/config_can.c:56:8: error: use of undeclared identifier 'ID_CHASSIS_LF'
+                case ID_CHASSIS_LF:
+                     ^
+./MDK-ARM/USER/config/config_can.c:57:4: error: use of undeclared identifier 'chassis_motor'
+                        chassis_motor[CHASSIS_LF].rx(&chassis_motor[CHASSIS_LF],rxBuf,8);
+                        ^
+./MDK-ARM/USER/config/config_can.c:57:18: error: use of undeclared identifier 'CHASSIS_LF'
+                        chassis_motor[CHASSIS_LF].rx(&chassis_motor[CHASSIS_LF],rxBuf,8);
+                                      ^
+./MDK-ARM/USER/config/config_can.c:57:34: error: use of undeclared identifier 'chassis_motor'
+                        chassis_motor[CHASSIS_LF].rx(&chassis_motor[CHASSIS_LF],rxBuf,8);
+                                                      ^
+./MDK-ARM/USER/config/config_can.c:57:48: error: use of undeclared identifier 'CHASSIS_LF'
+                        chassis_motor[CHASSIS_LF].rx(&chassis_motor[CHASSIS_LF],rxBuf,8);
+                                                                    ^
+./MDK-ARM/USER/config/config_can.c:59:8: error: use of undeclared identifier 'ID_CHASSIS_LB'
+                case ID_CHASSIS_LB:
+                     ^
+./MDK-ARM/USER/config/config_can.c:60:4: error: use of undeclared identifier 'chassis_motor'
+                        chassis_motor[CHASSIS_LB].rx(&chassis_motor[CHASSIS_LB],rxBuf,8);
+                        ^
+./MDK-ARM/USER/config/config_can.c:60:18: error: use of undeclared identifier 'CHASSIS_LB'
+                        chassis_motor[CHASSIS_LB].rx(&chassis_motor[CHASSIS_LB],rxBuf,8);
+                                      ^
+./MDK-ARM/USER/config/config_can.c:60:34: error: use of undeclared identifier 'chassis_motor'
+                        chassis_motor[CHASSIS_LB].rx(&chassis_motor[CHASSIS_LB],rxBuf,8);
+                                                      ^
+./MDK-ARM/USER/config/config_can.c:60:48: error: use of undeclared identifier 'CHASSIS_LB'
+                        chassis_motor[CHASSIS_LB].rx(&chassis_motor[CHASSIS_LB],rxBuf,8);
+                                                                    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+
+[2023-11-06 15:40:59]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_test.o -MMD ./MDK-ARM/USER/config/config_test.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:23:22: error: use of undeclared identifier 'RM3508'; did you mean 't_RM3508'?
+  .test_motor_type = RM3508,
+                     ^~~~~~
+                     t_RM3508
+MDK-ARM/USER/config/config_test.h:9:2: note: 't_RM3508' declared here
+        t_RM3508,
+        ^
+1 error generated.
+
+[2023-11-06 15:43:15]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_can.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_can.o -MMD ./MDK-ARM/USER/config/config_can.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:23:22: error: use of undeclared identifier 'RM3508'; did you mean 't_RM3508'?
+  .test_motor_type = RM3508,
+                     ^~~~~~
+                     t_RM3508
+MDK-ARM/USER/config/config_test.h:9:2: note: 't_RM3508' declared here
+        t_RM3508,
+        ^
+1 error generated.
+./MDK-ARM/USER/config/config_can.c:22:12: error: member reference type 'motor_t' (aka 'struct motor_class_t') is not a pointer; did you mean to use '.'?
+        test_motor->rx(&test_motor,rxBuf,8); 
+        ~~~~~~~~~~^~
+                  .
+./MDK-ARM/USER/config/config_can.c:36:12: error: member reference type 'motor_t' (aka 'struct motor_class_t') is not a pointer; did you mean to use '.'?
+        test_motor->rx(&test_motor,rxBuf,8); 
+        ~~~~~~~~~~^~
+                  .
+2 errors generated.
+
+[2023-11-06 15:43:32]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_test.o -MMD ./MDK-ARM/USER/config/config_test.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:23:22: error: use of undeclared identifier 'RM3508'; did you mean 't_RM3508'?
+  .test_motor_type = RM3508,
+                     ^~~~~~
+                     t_RM3508
+MDK-ARM/USER/config/config_test.h:9:2: note: 't_RM3508' declared here
+        t_RM3508,
+        ^
+1 error generated.
+
+[2023-11-06 15:53:00]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_test.o -MMD ./MDK-ARM/USER/config/config_test.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:21:4: error: field designator 'test_motor_id' does not refer to any field in type 'config_test_t'; did you mean 'test_motor_type'?
+  .test_motor_id = 0x201,
+   ^~~~~~~~~~~~~
+   test_motor_type
+MDK-ARM/USER/config/config_test.h:21:21: note: 'test_motor_type' declared here
+  test_motor_type_e test_motor_type;
+                    ^
+./MDK-ARM/USER/config/config_test.c:23:22: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+  .test_motor_type = t_RM3508,
+                     ^~~~~~~~
+./MDK-ARM/USER/config/config_test.c:21:20: note: previous initialization is here
+  .test_motor_id = 0x201,
+                   ^~~~~
+1 warning and 1 error generated.
+
+[2023-11-06 15:53:53]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:54:42: warning: implicit conversion from enumeration type 'test_motor_type_e' to different enumeration type 'motor_type_e' [-Wenum-conversion]
+  test_motor.id.motor_type = config_test.test_motor_type;
+                           ~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+./MDK-ARM/USER/device/test_motor.c:57:13: error: no member named 'pid_param' in 'struct motor_class_t'
+        test_motor.pid_param = config_test.RM3508_speed_pid_param;
+        ~~~~~~~~~~ ^
+1 warning and 1 error generated.
+
+[2023-11-06 15:57:35]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\config\config_test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/config/config_test.o -MMD ./MDK-ARM/USER/config/config_test.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/config/config_test.c:22:22: error: use of undeclared identifier 't_RM3508'; did you mean 'RM3508'?
+  .test_motor_type = t_RM3508,
+                     ^~~~~~~~
+                     RM3508
+MDK-ARM/USER/motor\motor_def.h:88:2: note: 'RM3508' declared here
+        RM3508,
+        ^
+1 error generated.
+
+[2023-11-06 15:58:31]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:57:13: error: no member named 'pid_param' in 'struct motor_class_t'
+        test_motor.pid_param = config_test.RM3508_speed_pid_param;
+        ~~~~~~~~~~ ^
+1 error generated.
+
+[2023-11-06 16:02:47]	[done]
+	build successfully !
+
+[2023-11-06 16:04:36]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:60:4: error: call to undeclared function 'Motor_Class_Pid_Update'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+          Motor_Class_Pid_Update(&test_motor.pid.speed,config_test.RM3508_speed_pid_param);
+          ^
+./MDK-ARM/USER/device/test_motor.c:60:4: note: did you mean 'Motor_Class_Pid_Init'?
+MDK-ARM/USER/motor\motor.h:51:6: note: 'Motor_Class_Pid_Init' declared here
+void Motor_Class_Pid_Init(motor_pid_t *pid, float *buff);
+     ^
+./MDK-ARM/USER/device/test_motor.c:68:6: error: conflicting types for 'Motor_Class_Pid_Update'
+void Motor_Class_Pid_Update(struct motor_pid *pid, float *buff)
+     ^
+./MDK-ARM/USER/device/test_motor.c:60:4: note: previous implicit declaration is here
+          Motor_Class_Pid_Update(&test_motor.pid.speed,config_test.RM3508_speed_pid_param);
+          ^
+2 errors generated.
+
+[2023-11-06 16:05:29]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:15:64: error: expected ';' after top level declarator
+void Motor_Class_Pid_Update(struct motor_pid *pid, float *buff)
+                                                               ^
+                                                               ;
+1 error generated.
+
+[2023-11-06 16:05:33]	[done]
+	build successfully !
+
+[2023-11-06 16:07:36]	[done]
+	build successfully !
+
+[2023-11-06 16:07:45]	[done]
+	build successfully !
+
+[2023-11-06 16:20:46]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\control\test.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/control/test.o -MMD ./MDK-ARM/USER/control/test.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/control/test.c:81:46: error: no member named 'test_speed' in 'config_test_t'
+  test->base_info.target_speed = config_test.test_speed;
+                                 ~~~~~~~~~~~ ^
+1 error generated.
+
+[2023-11-06 16:21:01]	[done]
+	build successfully !
+
+[2023-11-06 16:23:50]	[done]
+	build successfully !
+
+[2023-11-06 16:28:05]	[done]
+	build successfully !
+
+[2023-11-06 16:40:34]	[done]
+	build successfully !
+
+[2023-11-06 16:44:11]	[done]
+	build successfully !
+
+[2023-11-06 21:28:42]	compilation failed at : "d:\2024_ZJH\MotorTest\MDK-ARM\USER\device\test_motor.c", exit code: 1
+command: 
+  "C:\Keil_v5\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc -IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy -IMiddlewares/Third_Party/FreeRTOS/Source/include -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IDrivers/CMSIS/Device/ST/STM32F4xx/Include -IDrivers/CMSIS/Include -IMDK-ARM/USER/drive -IMDK-ARM/USER/device -IMDK-ARM/USER/device/Imu -IMDK-ARM/USER/Alog -IMDK-ARM/USER/Alog/support -IMDK-ARM/USER/config -IMDK-ARM/USER/control -IMDK-ARM/USER/device/oled -IMDK-ARM/USER/motor -IMDK-ARM/USER/my_task -IMDK-ARM/USER/protocol -IMDK-ARM/USER/protocol/crc -IDrivers/CMSIS-DSP/Include -IMDK-ARM/RTE/_MY_ENGINEER -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mcpu=cortex-m4 -mlittle-endian -D__MICROLIB -O0 -ffunction-sections -funsigned-char -fshort-enums -fshort-wchar -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MY_ENGINEER/MDK-ARM/USER/device/test_motor.o -MMD ./MDK-ARM/USER/device/test_motor.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./MDK-ARM/USER/device/test_motor.c:52:3: error: call to undeclared function 'Test_Motor_Config_Update'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  Test_Motor_Config_Update();
+  ^
+./MDK-ARM/USER/device/test_motor.c:55:6: error: conflicting types for 'Test_Motor_Config_Update'
+void Test_Motor_Config_Update(void)
+     ^
+./MDK-ARM/USER/device/test_motor.c:52:3: note: previous implicit declaration is here
+  Test_Motor_Config_Update();
+  ^
+2 errors generated.
+
+[2023-11-06 21:28:58]	[done]
+	build successfully !
+
+[2023-11-06 21:37:42]	[done]
+	build successfully !
+
+[2023-11-06 22:02:07]	[done]
+	build successfully !
+

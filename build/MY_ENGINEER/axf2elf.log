@@ -1,0 +1,4 @@
+arm-none-eabi-objcopy --update-section ER_IROM1="d:\2024_ZJH\MotorTest\build\MY_ENGINEER\MY_ENGINEER.bin" "d:\2024_ZJH\MotorTest\build\MY_ENGINEER\MY_ENGINEER.axf" "d:\2024_ZJH\MotorTest\build\MY_ENGINEER\MY_ENGINEER.elf"
+
+arm-none-eabi-objcopy: d:\2024_ZJH\MotorTest\build\MY_ENGINEER\MY_ENGINEER.elf: warning: allocated section `RW_IRAM1' not in segment
+

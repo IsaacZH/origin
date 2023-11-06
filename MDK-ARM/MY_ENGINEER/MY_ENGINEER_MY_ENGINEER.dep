@@ -1844,8 +1844,8 @@ I (USER\motor\MOTOR_EXAMPLE.h)(0x653F0450)
 I (USER\motor\motor.h)(0x653F0450)
 I (USER\motor\motor_def.h)(0x653F0450)
 I (USER\drive\drv_can.h)(0x653F0450)
-F (.\USER\protocol\can_protocol.c)(0x653F0450)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./USER/drive -I ./USER/device -I ./USER/device/Imu -I ./USER/Alog -I ./USER/Alog/support -I ./USER/config -I ./USER/control -I ./USER/device/oled -I ./USER/motor -I ./USER/my_task -I ./USER/protocol -I ./USER/protocol/crc -I ../Drivers/CMSIS-DSP/Include-I./RTE/_MY_ENGINEER-IC:/Users/18129/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/18129/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o my_engineer/can_protocol.o -MD)
-I (USER\protocol\can_protocol.h)(0x653F0450)
+F (.\USER\protocol\can_protocol.c)(0x6548F1DE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./USER/drive -I ./USER/device -I ./USER/device/Imu -I ./USER/Alog -I ./USER/Alog/support -I ./USER/config -I ./USER/control -I ./USER/device/oled -I ./USER/motor -I ./USER/my_task -I ./USER/protocol -I ./USER/protocol/crc -I ../Drivers/CMSIS-DSP/Include-I./RTE/_MY_ENGINEER-IC:/Users/18129/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/18129/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4-o my_engineer/can_protocol.o -MD)
+I (USER\protocol\can_protocol.h)(0x6548F1DE)
 I (USER\config\config.h)(0x653F0450)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x653F0450)
 I (..\Core\Inc\stm32f4xx_hal_conf.h)(0x653F044C)
@@ -2974,7 +2974,7 @@ I (USER\config\config_remote.h)(0x653F0450)
 I (USER\device\Imu\imu_sensor.h)(0x653F0450)
 I (USER\device\Imu\bmi_t.h)(0x653F0450)
 I (USER\drive\drv_flash.h)(0x653F0450)
-I (USER\protocol\can_protocol.h)(0x653F0450)
+I (USER\protocol\can_protocol.h)(0x6548F1DE)
 I (USER\protocol\vision_protocol.h)(0x653F0450)
 I (USER\protocol\communicate_protocol.h)(0x653F0450)
 I (USER\protocol\my_judge.h)(0x653F0450)
