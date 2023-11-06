@@ -113,6 +113,33 @@ uint8_t CAN_Send(void)
 		return HAL_ERROR;
 	memset(can_txbuff,0,sizeof(can_txbuff));
 	
+	/*****0x2ff包*****/
+	HAL_CAN_TxHeadeInit(CAN_0x2ff_ID);
+	/*CAN1*/
+	if(RC_ONLINE)
+	{
+		/*发送电机筛选遍历*/
+		for(uint16_t i=0;i<DEVICE_CNT;i++)
+			if(device[i].motor->id.drive_type == M_CAN1)
+				if(device[i].motor->id.rx_id>=0x209&&device[i].motor->id.rx_id<=0x20B)
+					device[i].motor->tx(device[i].motor,can_txbuff,8);
+	}
+	if(HAL_CAN_AddTxMessage(&hcan1,&CAN_TxHeadeType,can_txbuff,(uint32_t *)CAN_TX_MAILBOX0)!=HAL_OK)
+		return HAL_ERROR;
+	memset(can_txbuff,0,sizeof(can_txbuff));
+	/*CAN2*/
+	if(RC_ONLINE)
+	{
+		/*发送电机筛选遍历*/
+		for(uint16_t i=0;i<DEVICE_CNT;i++)
+			if(device[i].motor->id.drive_type == M_CAN2)
+				if(device[i].motor->id.rx_id>=0x209&&device[i].motor->id.rx_id<=0x20B)
+					device[i].motor->tx(device[i].motor,can_txbuff,8);
+	}
+	if(HAL_CAN_AddTxMessage(&hcan2,&CAN_TxHeadeType,can_txbuff,(uint32_t *)CAN_TX_MAILBOX1)!=HAL_OK)
+		return HAL_ERROR;
+	memset(can_txbuff,0,sizeof(can_txbuff));
+	
 	return HAL_OK;
 }
 
