@@ -60,18 +60,27 @@ void Test_Motor_Config_Update(void)
 
   get_rm_can_drvie(&test_motor);
   
-  switch (control.control_mode)
+  switch (control.pid_type)
   {
-  case SPEED_MODE:
-	  Motor_Class_Pid_Update(&test_motor.pid.speed,control.speed_pid_param);
+  case PID_GM6020:
+    Motor_Class_Pid_Update(&test_motor.pid.speed,control.GM6020_speed_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position,control.GM6020_posit_out_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position_in,control.GM6020_posit_in_pid_param);
     break;
-  case POSITION_MODE:
-    Motor_Class_Pid_Update(&test_motor.pid.position,control.posit_out_pid_param);
-    Motor_Class_Pid_Update(&test_motor.pid.position_in,control.posit_in_pid_param);
+  case PID_RM2006:
+    Motor_Class_Pid_Update(&test_motor.pid.speed,control.RM2006_speed_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position,control.RM2006_posit_out_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position_in,control.RM2006_posit_in_pid_param);
+    break;
+  case PID_RM3508:
+    Motor_Class_Pid_Update(&test_motor.pid.speed,control.RM3508_speed_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position,control.RM3508_posit_out_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position_in,control.RM3508_posit_in_pid_param);
     break;
   default:
     break;
   }
+
 }
 
 /**
