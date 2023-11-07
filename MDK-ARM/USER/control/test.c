@@ -30,12 +30,15 @@ test_t test =
   * @author  
   * @Date    
 **/
+int16_t speed;
+int16_t output = 8000;
 void Test_Pid_Calculating(test_t *test)
 {
 	if (control.control_mode == SPEED_MODE)//速度模式
   {
     /* code */  
-    test->base_info.output = test->motor->c_speed(test->motor,test->base_info.target_speed);
+//    test->base_info.output = output;//test->motor->c_speed(test->motor,test->base_info.target_speed);
+		test->base_info.output = test->motor->c_speed(test->motor,test->base_info.target_speed);
 
   }
   else if (control.control_mode == POSITION_MODE)//位置模式
@@ -44,6 +47,7 @@ void Test_Pid_Calculating(test_t *test)
     test->base_info.output = test->motor->c_posit(test->motor,test->base_info.target_position);
   }
   
+	speed = test->motor->rx_info.speed;
 }
 
 /**
