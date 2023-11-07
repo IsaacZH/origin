@@ -70,6 +70,7 @@ void StartHeartBeatTask(void const * argument)
 {
   for(;;)
   {
+    Control_Info_Update(&control);
 		Device_HeartBeat();
 		rc_heart_beat(&rc);
     osDelay(1);

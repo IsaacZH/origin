@@ -26,3 +26,14 @@ control_t control =
   
 };
 
+/**
+ * @brief 信息更新 task中调用
+ * 
+ * @param control 
+ */
+void Control_Info_Update(control_t *control)
+{
+  control->rx_info = &test_motor.rx_info;
+  control->state = &test_motor.state;
+}
+

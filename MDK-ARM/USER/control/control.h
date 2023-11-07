@@ -4,7 +4,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 #include "motor_def.h"
-
+#include "device.h"
 /**
  * @brief ¿ØÖÆÄ£Ê½
  * 
@@ -27,7 +27,7 @@ typedef struct __packed
   float speed_pid_param[7];
   float posit_out_pid_param[7];
   float posit_in_pid_param[7];
-  
+    
   control_mode_e control_mode;
 
   int16_t target_speed;
@@ -36,5 +36,6 @@ typedef struct __packed
 
 
 extern control_t control;
+void Control_Info_Update(control_t *control);
 
 #endif
