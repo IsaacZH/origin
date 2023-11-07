@@ -15,7 +15,8 @@
             "motor_def.h": "c",
             "device.h": "c",
             "config_test.h": "c",
-            "test.h": "c"
+            "test.h": "c",
+            "control.h": "c"
         }
     },
     "extensions": {}

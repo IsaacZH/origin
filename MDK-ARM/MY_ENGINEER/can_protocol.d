@@ -38,6 +38,6 @@ my_engineer/can_protocol.o: USER\protocol\can_protocol.c \
   USER\drive\drv_can.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   USER\config\config_can.h USER\device\remote.h \
   USER\config\config_remote.h USER\device\device.h USER\motor\motor.h \
-  USER\motor\motor_def.h USER\device\test_motor.h \
-  USER\config\config_test.h USER\device\Imu\imu_sensor.h \
-  USER\device\Imu\bmi_t.h USER\drive\drv_flash.h
+  USER\motor\motor_def.h USER\device\test_motor.h USER\control\control.h \
+  USER\device\Imu\imu_sensor.h USER\device\Imu\bmi_t.h \
+  USER\drive\drv_flash.h

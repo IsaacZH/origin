@@ -49,11 +49,10 @@ my_engineer/my_task.o: USER\my_task\my_task.c USER\my_task\my_task.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   USER\device\device.h USER\config\config.h USER\motor\motor.h \
-  USER\motor\motor_def.h USER\device\test_motor.h \
-  USER\config\config_test.h USER\device\remote.h \
-  USER\config\config_remote.h USER\device\Imu\imu_sensor.h \
-  USER\device\Imu\bmi_t.h USER\drive\drv_flash.h \
-  USER\protocol\can_protocol.h USER\drive\drive.h \
+  USER\motor\motor_def.h USER\device\test_motor.h USER\control\control.h \
+  USER\device\remote.h USER\config\config_remote.h \
+  USER\device\Imu\imu_sensor.h USER\device\Imu\bmi_t.h \
+  USER\drive\drv_flash.h USER\protocol\can_protocol.h USER\drive\drive.h \
   USER\drive\drv_haltick.h USER\drive\drv_can.h USER\drive\drv_io.h \
   ..\Core\Inc\main.h USER\drive\drv_uart.h USER\drive\drv_tim.h \
   ..\Core\Inc\usart.h

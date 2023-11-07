@@ -18,13 +18,10 @@ void Test_Motor_Config_Update(void);
 motor_t test_motor =
 {		
 	.id.drive_type = M_CAN1,
-	.id.motor_type = RM3508,
+	.id.motor_type = GM6020,
 
 	.init = Motor_Class_Init,
 };
-
-
-
 
 /**
   * @Name    test_motor_init
@@ -37,6 +34,7 @@ motor_t test_motor =
 void test_motor_init(void)
 {
 	test_motor.init(&test_motor);
+  
 }
 
 /**
@@ -53,21 +51,25 @@ void test_motor_heart_beat(void)
   Test_Motor_Config_Update();
 }
 
+/**
+ * @brief 电机配置更新
+ * 
+ */
 void Test_Motor_Config_Update(void)
 {
-  test_motor.id.motor_type = config_test.test_motor_type;
+
   get_rm_can_drvie(&test_motor);
   
-  switch (config_test.test_motor_type)
+  switch (control.pid_type)
   {
-  case RM3508:
-	  Motor_Class_Pid_Update(&test_motor.pid.speed,config_test.RM3508_speed_pid_param);
+  case PID_1:
+	  Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_1);
     break;
-  case RM2006:
-    Motor_Class_Pid_Update(&test_motor.pid.speed,config_test.RM2006_speed_pid_param);
+  case PID_2:
+    Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_2);
     break;
-  case GM6020:
-    Motor_Class_Pid_Update(&test_motor.pid.speed,config_test.GM6020_speed_pid_param);
+  case PID_3:
+    Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_3);
     break;
   default:
     break;

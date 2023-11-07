@@ -729,11 +729,6 @@
               <FileType>1</FileType>
               <FilePath>.\USER\config\config_uart.c</FilePath>
             </File>
-            <File>
-              <FileName>config_test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USER\config\config_test.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -768,6 +763,11 @@
               <FileName>test.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\control\test.c</FilePath>
+            </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\control\control.c</FilePath>
             </File>
           </Files>
         </Group>

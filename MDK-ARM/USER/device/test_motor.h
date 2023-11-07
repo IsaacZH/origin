@@ -3,7 +3,7 @@
 
 #include "config.h"
 #include "motor.h"
-#include "config_test.h"
+#include "control.h"
 typedef enum
 {
   TEST_MOTOR_LIST,

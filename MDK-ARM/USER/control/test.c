@@ -41,7 +41,7 @@ void Test_Pid_Calculating(test_t *test)
  */
 void Test_Update(test_t *test)
 {
-  test->base_info.target_speed = config_test.target_speed;
+  test->base_info.target_speed = control.target_speed;
 }
 
 /**
@@ -72,7 +72,7 @@ void Test_Work(test_t *test)
 {
   if (RC_ONLINE)
   {
-    test->base_info.target_speed = config_test.target_speed;
+    test->base_info.target_speed = control.target_speed;
     Test_Work_Normal(test);
   }
   else

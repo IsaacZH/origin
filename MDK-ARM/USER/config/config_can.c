@@ -7,7 +7,7 @@
   */
 
 #include "config_can.h"
-#include "config_test.h"
+#include "control.h"
 #include "config.h"
 #include "device.h"
 

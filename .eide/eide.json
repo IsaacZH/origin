@@ -99,9 +99,6 @@
             "path": "MDK-ARM/USER/config/config_can.c"
           },
           {
-            "path": "MDK-ARM/USER/config/config_test.c"
-          },
-          {
             "path": "MDK-ARM/USER/config/config_uart.c"
           }
         ],
@@ -110,6 +107,9 @@
       {
         "name": "control",
         "files": [
+          {
+            "path": "MDK-ARM/USER/control/control.c"
+          },
           {
             "path": "MDK-ARM/USER/control/test.c"
           }

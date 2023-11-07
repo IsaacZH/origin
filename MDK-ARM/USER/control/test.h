@@ -4,7 +4,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "config.h"
 #include "test_motor.h"
-#include "config_test.h"
+#include "control.h"
 /* Private macro -------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /* Private typedef -----------------------------------------------------------*/

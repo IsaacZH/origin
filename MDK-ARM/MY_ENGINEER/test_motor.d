@@ -35,4 +35,4 @@ my_engineer/test_motor.o: USER\device\test_motor.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  USER\motor\motor.h USER\motor\motor_def.h USER\config\config_test.h
+  USER\motor\motor.h USER\motor\motor_def.h USER\control\control.h

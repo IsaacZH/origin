@@ -82,8 +82,7 @@ my_engineer/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\CMSIS-DSP\Include\dsp\quaternion_math_functions.h \
   ..\Drivers\CMSIS-DSP\Include\dsp\window_functions.h \
   USER\device\device.h USER\config\config.h USER\motor\motor.h \
-  USER\motor\motor_def.h USER\device\test_motor.h \
-  USER\config\config_test.h USER\device\remote.h \
-  USER\config\config_remote.h USER\device\Imu\imu_sensor.h \
-  USER\drive\drv_flash.h USER\drive\drive.h USER\drive\drv_haltick.h \
-  USER\drive\drv_io.h USER\drive\drv_tim.h
+  USER\motor\motor_def.h USER\device\test_motor.h USER\control\control.h \
+  USER\device\remote.h USER\config\config_remote.h \
+  USER\device\Imu\imu_sensor.h USER\drive\drv_flash.h USER\drive\drive.h \
+  USER\drive\drv_haltick.h USER\drive\drv_io.h USER\drive\drv_tim.h

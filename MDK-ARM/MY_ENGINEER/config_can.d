@@ -35,7 +35,7 @@ my_engineer/config_can.o: USER\config\config_can.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  USER\config\config_test.h USER\motor\motor_def.h USER\config\config.h \
+  USER\control\control.h USER\motor\motor_def.h USER\config\config.h \
   USER\device\device.h USER\motor\motor.h USER\device\test_motor.h \
   USER\device\remote.h USER\config\config_remote.h \
   USER\device\Imu\imu_sensor.h USER\device\Imu\bmi_t.h \

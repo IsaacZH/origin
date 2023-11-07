@@ -36,6 +36,6 @@ my_engineer/test.o: USER\control\test.c USER\control\test.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   USER\device\test_motor.h USER\motor\motor.h USER\motor\motor_def.h \
-  USER\config\config_test.h USER\device\device.h USER\device\remote.h \
+  USER\control\control.h USER\device\device.h USER\device\remote.h \
   USER\config\config_remote.h USER\device\Imu\imu_sensor.h \
   USER\device\Imu\bmi_t.h USER\drive\drv_flash.h
