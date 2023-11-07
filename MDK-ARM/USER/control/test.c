@@ -32,7 +32,18 @@ test_t test =
 **/
 void Test_Pid_Calculating(test_t *test)
 {
-	test->base_info.output = test->motor->c_speed(test->motor,test->base_info.target_speed);
+	if (control.control_mode == SPEED_MODE)//速度模式
+  {
+    /* code */  
+    test->base_info.output = test->motor->c_speed(test->motor,test->base_info.target_speed);
+
+  }
+  else if (control.control_mode == POSITION_MODE)//位置模式
+  {
+    /* code */
+    test->base_info.output = test->motor->c_posit(test->motor,test->base_info.target_position);
+  }
+  
 }
 
 /**
@@ -42,6 +53,7 @@ void Test_Pid_Calculating(test_t *test)
 void Test_Update(test_t *test)
 {
   test->base_info.target_speed = control.target_speed;
+  test->base_info.target_position = control.target_position;
 }
 
 /**

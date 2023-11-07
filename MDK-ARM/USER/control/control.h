@@ -6,17 +6,6 @@
 #include "motor_def.h"
 
 /**
- * @brief pid类型
- * 
- */
-typedef enum
-{
-  PID_1 = 1,
-  PID_2,
-  PID_3,
-}pid_type_e;
-
-/**
  * @brief 控制模式
  * 
  */
@@ -35,11 +24,10 @@ typedef struct __packed
   motor_rx_info_t        *rx_info;
 	motor_state_info_t     *state;
   
-  float pid_param_1[7];
-  float pid_param_2[7];
-  float pid_param_3[7];
+  float speed_pid_param[7];
+  float posit_out_pid_param[7];
+  float posit_in_pid_param[7];
   
-  pid_type_e pid_type;
   control_mode_e control_mode;
 
   int16_t target_speed;

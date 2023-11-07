@@ -14,15 +14,15 @@
 /*kp		 ki		  kd		b_err	  int_max		iout_max	out_max*/
 control_t control = 
 {
-  .pid_param_1 = {8,0.33,0,0,10000,6000,9000},
-  .pid_param_2 = {8,0.33,0,0,10000,6000,9000},
-  .pid_param_3 = {8,0.33,0,0,10000,6000,9000},
+  .speed_pid_param     = {0,10,0,0,2500,20000,20000},
+  .posit_out_pid_param = {0.1,0,5,0,10000,6000,300},
+  .posit_in_pid_param  = {0,10,0,0,10000,20000,20000},
 
 
-  .pid_type = PID_1,
-  .control_mode = SPEED_MODE,
+  .control_mode = POSITION_MODE,
   
   .target_speed = 100,
+  .target_position = 10000,
   
 };
 

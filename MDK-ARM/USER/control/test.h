@@ -33,7 +33,8 @@ typedef struct __packed
 {
 	
 	int16_t      target_speed;
-	
+	int32_t			 target_position;
+
 	int16_t    	 output;
 }test_base_info_t;
 

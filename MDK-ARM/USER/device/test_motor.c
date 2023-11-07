@@ -60,16 +60,14 @@ void Test_Motor_Config_Update(void)
 
   get_rm_can_drvie(&test_motor);
   
-  switch (control.pid_type)
+  switch (control.control_mode)
   {
-  case PID_1:
-	  Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_1);
+  case SPEED_MODE:
+	  Motor_Class_Pid_Update(&test_motor.pid.speed,control.speed_pid_param);
     break;
-  case PID_2:
-    Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_2);
-    break;
-  case PID_3:
-    Motor_Class_Pid_Update(&test_motor.pid.speed,control.pid_param_3);
+  case POSITION_MODE:
+    Motor_Class_Pid_Update(&test_motor.pid.position,control.posit_out_pid_param);
+    Motor_Class_Pid_Update(&test_motor.pid.position_in,control.posit_in_pid_param);
     break;
   default:
     break;

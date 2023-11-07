@@ -163,12 +163,17 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>test_motor,0x10</ItemText>
+          <ItemText>test_motor,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>test</ItemText>
+          <ItemText>test,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>\\MY_ENGINEER\USER/control/test.c\test.base_info</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -176,6 +181,16 @@
           <count>0</count>
           <WinNumber>2</WinNumber>
           <ItemText>\\MY_ENGINEER\USER/config/config_test.c\config_test,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>control,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>\\MY_ENGINEER\USER/control/control.c\control.posit_in_pid_param[1]</ItemText>
         </Ww>
       </WatchWindow2>
       <MemoryWindow1>
@@ -192,7 +207,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
