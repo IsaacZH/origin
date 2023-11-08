@@ -11,7 +11,6 @@
 #include "device.h"
 
 /* Private function prototypes -----------------------------------------------*/
-void Test_Update(test_t *test);
 /* Exported variables --------------------------------------------------------*/
 
 test_t test = 
@@ -30,14 +29,11 @@ test_t test =
   * @author  
   * @Date    
 **/
-int16_t speed;
-int16_t output = 8000;
 void Test_Pid_Calculating(test_t *test)
 {
 	if (control.control_mode == SPEED_MODE)//速度模式
   {
     /* code */  
-//    test->base_info.output = output;//test->motor->c_speed(test->motor,test->base_info.target_speed);
 		test->base_info.output = test->motor->c_speed(test->motor,test->base_info.target_speed);
 
   }
@@ -46,18 +42,6 @@ void Test_Pid_Calculating(test_t *test)
     /* code */
     test->base_info.output = test->motor->c_posit(test->motor,test->base_info.target_position);
   }
-  
-	speed = test->motor->rx_info.speed;
-}
-
-/**
- * @brief 从配置文件中更新参数
- * 
- */
-void Test_Update(test_t *test)
-{
-  test->base_info.target_speed = control.target_speed;
-  test->base_info.target_position = control.target_position;
 }
 
 /**
@@ -89,6 +73,7 @@ void Test_Work(test_t *test)
   if (RC_ONLINE)
   {
     test->base_info.target_speed = control.target_speed;
+    test->base_info.target_position = control.target_position;
     Test_Work_Normal(test);
   }
   else

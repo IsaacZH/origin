@@ -5,7 +5,7 @@
 #include "stm32f4xx_hal.h"
 #include "motor_def.h"
 #include "device.h"
-
+#include "string.h"
 /**
  * @brief ¿ØÖÆÄ£Ê½
  * 

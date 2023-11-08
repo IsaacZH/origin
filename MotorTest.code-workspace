@@ -16,7 +16,9 @@
             "device.h": "c",
             "config_test.h": "c",
             "test.h": "c",
-            "control.h": "c"
+            "control.h": "c",
+            "can_protocol.h": "c",
+            "string.h": "c"
         }
     },
     "extensions": {}
