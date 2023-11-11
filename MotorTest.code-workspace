@@ -18,7 +18,9 @@
             "test.h": "c",
             "control.h": "c",
             "can_protocol.h": "c",
-            "string.h": "c"
+            "string.h": "c",
+            "drive.h": "c",
+            "config_can.h": "c"
         }
     },
     "extensions": {}

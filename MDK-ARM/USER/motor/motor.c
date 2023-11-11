@@ -45,6 +45,8 @@ uint8_t can_tx_buff(struct motor_class_t *motor, uint8_t *buff,uint8_t len)
 uint8_t can_rx_buff(struct motor_class_t *motor, uint8_t *buff,uint8_t len)
 {
 	uint8_t res;
+	static uint32_t lastUpdateTick = 0;
+	static uint32_t reportCount = 0;
 	
 	if(motor == NULL || buff == NULL)
 	{
@@ -59,10 +61,18 @@ uint8_t can_rx_buff(struct motor_class_t *motor, uint8_t *buff,uint8_t len)
 	if(motor->id.motor_type > 0 && motor->id.motor_type <= 3)		//RM motor
 	{
 		get_rm_info(motor,buff);
+		reportCount++;
 	}
 	else if(motor->id.motor_type > 3 && motor->id.motor_type <= 5)	//kt motor	
 	{
 		get_kt_9025_info(motor,buff);
+	}
+
+	if (HAL_GetTick() - lastUpdateTick >= 1000)
+	{
+		lastUpdateTick = HAL_GetTick();
+		motor->state.report_rate = reportCount;
+		reportCount = 0;
 	}
 	
 	return res;

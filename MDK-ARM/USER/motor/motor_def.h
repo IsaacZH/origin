@@ -146,7 +146,7 @@ typedef struct
 	
 	uint8_t       offline_cnt_max;
 	uint8_t       offline_cnt;
-
+	uint32_t      report_rate;
 	motor_state_e work_state;	
 	
 }motor_state_info_t;//电机的ID信息
