@@ -381,7 +381,9 @@
   },
   "targets": {
     "MY_ENGINEER": {
-      "excludeList": [],
+      "excludeList": [
+        "<virtual_root>/imu"
+      ],
       "toolchain": "AC6",
       "compileConfig": {
         "cpuType": "Cortex-M4",

@@ -20,7 +20,8 @@
             "can_protocol.h": "c",
             "string.h": "c",
             "drive.h": "c",
-            "config_can.h": "c"
+            "config_can.h": "c",
+            "gpio.h": "c"
         }
     },
     "extensions": {}

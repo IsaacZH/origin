@@ -35,16 +35,16 @@ control_t control =
    * PID_RM2006(1) 
    * PID_RM3508(2)
    */
-  .pid_type = PID_GM6020,
+  .pid_type =PID_GM6020,
   
   /**
    * @brief 控制模式
    * 速度环：SPEED_MODE(0) 
    * 位置环：POSITION_MODE(1)
    */
-  .control_mode = POSITION_MODE, 
+  .control_mode = SPEED_MODE,                                                                                                                        
 
-  .target_speed    = 0,     //电机目标速度
+  .target_speed    = 50,     //电机目标速度
   .target_position = 0,     //电机目标位置
   
 };
@@ -65,3 +65,19 @@ void Control_Info_Update(control_t *control)
   
 }
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  switch (control.pid_type)
+  {
+  case PID_GM6020:
+    if (control.target_speed < 300)
+    {
+      control.target_speed += 50;
+    }
+    
+    break;
+  
+  default:
+    break;
+  }
+}

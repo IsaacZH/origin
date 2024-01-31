@@ -78,7 +78,7 @@ int rslt_time = 0;
   * @retval int
   */
 int main(void)
-  {
+{
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -111,7 +111,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_UART4_Init();
   MX_USART6_UART_Init();
-//  MX_IWDG_Init();
+  MX_IWDG_Init();
   MX_TIM11_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
