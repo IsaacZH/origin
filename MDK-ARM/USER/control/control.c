@@ -24,10 +24,13 @@ control_t control =
   .RM2006_posit_in_pid_param  = {1.64, 0.00686, 0.82,     0,  20000000,     25000,     25000},
   .RM2006_posit_out_pid_param = {0.7,        0, 15.6,     0,  20000000,     20000,     20000},
   /*3508 pid*/                                  
-  .RM3508_speed_pid_param     = {0.9,  0.00084,   15,     0,  20000000,     20000,      9000},
+//  .RM3508_speed_pid_param     = {0.9,  0.00084,   15,     0,  20000000,     20000,      9000},
+	.RM3508_speed_pid_param     =  {8,  1,   0,     0,  4000,     4000,      9000},
+
   .RM3508_posit_in_pid_param  = {0.9,  0.00084,   15,     0,  20000000,     20000,      9000},
   .RM3508_posit_out_pid_param = {0.08,    0.08,    9,     0,      2000,      6000,    100000},
 
+	.outpost_speed_pid_param     = {8,  1,   0,     0,  4000,     4000,      9000},
 
   /**
    * @brief pid类型,选用哪一套pid参数
@@ -35,7 +38,7 @@ control_t control =
    * PID_RM2006(1) 
    * PID_RM3508(2)
    */
-  .pid_type =PID_GM6020,
+  .pid_type =PID_RM3508,
   
   /**
    * @brief 控制模式
@@ -44,7 +47,7 @@ control_t control =
    */
   .control_mode = SPEED_MODE,                                                                                                                        
 
-  .target_speed    = 50,     //电机目标速度
+  .target_speed    = 824,     //电机目标速度
   .target_position = 0,     //电机目标位置
   
 };

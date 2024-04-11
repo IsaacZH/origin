@@ -45,6 +45,8 @@ typedef struct __packed
   float RM2006_speed_pid_param[7];
   float RM2006_posit_out_pid_param[7];
   float RM2006_posit_in_pid_param[7];
+	
+	float outpost_speed_pid_param[7];
 
 	motor_rx_info_t    *rx_info;  //接收信息
 	motor_state_info_t *state;    //状态信息

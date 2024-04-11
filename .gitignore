@@ -88,3 +88,4 @@ DebugConfig/
 ~s*
 *.TMP 
 MDK-ARM/MY_ENGINEER.uvguix.Isaac
+MDK-ARM/RTE/_MY_ENGINEER/RTE_Components.h
