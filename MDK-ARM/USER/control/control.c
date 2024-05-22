@@ -65,7 +65,6 @@ void Control_Info_Update(control_t *control)
   {
     memset(control->rx_info,0,sizeof(motor_rx_info_t));
   }
-  
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
