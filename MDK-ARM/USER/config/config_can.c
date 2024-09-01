@@ -22,7 +22,7 @@ void CAN2_RX(uint32_t canId, uint8_t *rxBuf)
 	test_motor.rx(&test_motor,rxBuf,8);
 	test_motor.id.rx_id = canId;
 	test_motor.id.drive_type = M_CAN2;
-	control.target_speed = 824;
+	// control.target_speed = 824;
 }
 
 /**
@@ -39,7 +39,7 @@ void CAN1_RX(uint32_t canId, uint8_t *rxBuf)
 	test_motor.rx(&test_motor,rxBuf,8);
 	test_motor.id.rx_id = canId;
 	test_motor.id.drive_type = M_CAN1; 
-	control.target_speed = -824;
+	// control.target_speed = -824;
 
 }
 

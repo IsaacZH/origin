@@ -10,7 +10,9 @@
  */
 
 #include "control.h"
+#include "rp_math.h"
 
+void Outpost_Work();
 
 /*kp		 ki		  kd		b_err	  int_max		iout_max	out_max*/
 control_t control = 
@@ -47,8 +49,10 @@ control_t control =
    */
   .control_mode = SPEED_MODE,                                                                                                                        
 
-  .target_speed    = 824,     //电机目标速度
+  .target_speed    = 0,     //电机目标速度
   .target_position = 0,     //电机目标位置
+
+  .outpost_status = OUTPOST_SLEEP,
   
 };
 
@@ -65,6 +69,7 @@ void Control_Info_Update(control_t *control)
   {
     memset(control->rx_info,0,sizeof(motor_rx_info_t));
   }
+  Outpost_Work();
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
@@ -82,4 +87,50 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   default:
     break;
   }
+}
+
+void Outpost_Work()
+{
+  static int32_t original_motor_angle = 0;
+  static uint8_t start_cnt_flag = 0;
+  if (control.outpost_status == OUTPOST_SLEEP)
+  {
+    if (abs(control.rx_info->speed) > OUTPOST_START_SPEED)
+    {
+      if (start_cnt_flag == 0)
+      {
+        start_cnt_flag = 1;
+        original_motor_angle = control.rx_info->angle_sum;
+      }
+      
+    }
+    else
+    {
+      start_cnt_flag = 0;
+    }
+    
+    if (start_cnt_flag == 1)
+    {
+      if (control.rx_info->angle_sum - original_motor_angle > OUTPOST_START_POSITION)
+      {
+        control.outpost_status = OUTPOST_RIGHT;
+      }
+      else if (original_motor_angle -control.rx_info->angle_sum > OUTPOST_START_POSITION)
+      {
+        control.outpost_status = OUTPOST_LEFT;
+      }
+    }
+  }
+
+  if (control.outpost_status == OUTPOST_RIGHT)
+  {
+    control.target_speed = OUTPOST_SPEED;
+  }
+  
+  if (control.outpost_status == OUTPOST_LEFT)
+  {
+    control.target_speed = -OUTPOST_SPEED;
+  }
+  
+  
 }

@@ -6,6 +6,11 @@
 #include "motor_def.h"
 #include "device.h"
 #include "string.h"
+
+#define OUTPOST_SPEED 824
+
+#define OUTPOST_START_SPEED 20
+#define OUTPOST_START_POSITION 1000
 /**
  * @brief 控制模式
  * 
@@ -26,6 +31,17 @@ typedef enum
   PID_RM2006,
   PID_RM3508,
 }pid_type_e;
+
+/**
+ * @brief 前哨站状态
+ * 
+ */
+typedef enum
+{
+  OUTPOST_SLEEP,
+  OUTPOST_LEFT,
+  OUTPOST_RIGHT,
+}outpost_status_e;
 
 /**
  * @brief 控制信息
@@ -55,6 +71,8 @@ typedef struct __packed
   control_mode_e control_mode;     //控制模式
   int16_t        target_speed;     //目标速度
   int32_t        target_position;  //目标位置
+
+  outpost_status_e outpost_status;
 }control_t;
 
 

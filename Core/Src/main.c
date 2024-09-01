@@ -115,8 +115,8 @@ int main(void)
   MX_TIM11_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-//	imu_sensor.init(&imu_sensor);
-//	HAL_Delay(10);
+	imu_sensor.init(&imu_sensor);
+	HAL_Delay(10);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
